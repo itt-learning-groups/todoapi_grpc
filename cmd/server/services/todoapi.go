@@ -6,9 +6,7 @@ import (
 	todoapiv1 "github.com/itt-learning-groups/proto-contracts/todoapi/gen/go/v1"
 )
 
-// `go get github.com/itt-learning-groups/proto-contracts/todoapi/gen/go/v1` after syncing local with remote `proto-contracts` repo on Github
-
-type TodoapiServer struct {}
+type TodoapiServer struct{}
 
 func (tas *TodoapiServer) CreateTodo(ctx context.Context, req *todoapiv1.CreateTodoRequest) (*todoapiv1.CreateTodoResponse, error) {
 	id := uuid.New().String()
@@ -20,7 +18,3 @@ func (tas *TodoapiServer) CreateTodo(ctx context.Context, req *todoapiv1.CreateT
 		},
 	}, nil
 }
-
-//func (tas *TodoapiServer) CreateTodo(ctx context.Context, req *todoapiv1.CreateTodoRequest) (*todoapiv1.CreateTodoResponse, error) {
-//	return &todoapiv1.CreateTodoResponse{}, status.Errorf(codes.Internal, "generic internal error")
-//}

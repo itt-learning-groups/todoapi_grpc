@@ -16,27 +16,14 @@ github.com/golang/protobuf/ptypes/wrappers
 # github.com/google/uuid v1.1.2
 ## explicit
 github.com/google/uuid
-# github.com/grpc-ecosystem/go-grpc-middleware v1.3.0
-## explicit; go 1.14
-github.com/grpc-ecosystem/go-grpc-middleware
-github.com/grpc-ecosystem/go-grpc-middleware/logging
-github.com/grpc-ecosystem/go-grpc-middleware/logging/logrus
-github.com/grpc-ecosystem/go-grpc-middleware/logging/logrus/ctxlogrus
-github.com/grpc-ecosystem/go-grpc-middleware/tags
 # github.com/grpc-ecosystem/grpc-gateway v1.16.0
 ## explicit; go 1.14
 github.com/grpc-ecosystem/grpc-gateway/internal
 github.com/grpc-ecosystem/grpc-gateway/runtime
 github.com/grpc-ecosystem/grpc-gateway/utilities
-# github.com/itt-learning-groups/proto-contracts v0.0.0-20211014010811-5af63ed2be88
+# github.com/itt-learning-groups/proto-contracts v1.1.0
 ## explicit
 github.com/itt-learning-groups/proto-contracts/todoapi/gen/go/v1
-# github.com/konsorten/go-windows-terminal-sequences v1.0.1
-## explicit
-github.com/konsorten/go-windows-terminal-sequences
-# github.com/sirupsen/logrus v1.4.2
-## explicit
-github.com/sirupsen/logrus
 # golang.org/x/net v0.0.0-20210405180319-a5a99cb37ef4
 ## explicit; go 1.11
 golang.org/x/net/http/httpguts
