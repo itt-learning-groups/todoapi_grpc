@@ -11,12 +11,12 @@ import (
 )
 
 func main() {
-	serverPort := 50051
-	serverAddress := fmt.Sprintf("localhost:%d", serverPort)
+	grpcServerPort := 50051
+	grpcServerAddress := fmt.Sprintf("localhost:%d", grpcServerPort)
 
-	conn, err := net.Listen("tcp", serverAddress)
+	listener, err := net.Listen("tcp", grpcServerAddress)
 	if err != nil {
-		log.Fatalf("Cannot listen to address %s", serverAddress)
+		log.Fatalf("cannot listen to address %s: %v", grpcServerAddress, err)
 	}
 
 	grpcServer := grpc.NewServer()
@@ -27,8 +27,9 @@ func main() {
 
 	reflection.Register(grpcServer)
 
-	log.Printf("serving TodoapiServer on %s", serverAddress)
-	if err := grpcServer.Serve(conn); err != nil {
+	log.Printf("serving TodoapiServer (grpc) on %s", grpcServerAddress)
+
+	if err := grpcServer.Serve(listener); err != nil {
 		log.Fatalf("failed to serve: %v", err)
 	}
 }
